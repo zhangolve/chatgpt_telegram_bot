@@ -45,6 +45,15 @@ You can deploy your own bot, or use mine: [@chatgpt_karfly_bot](https://t.me/cha
 <img src="https://raw.githubusercontent.com/zhangolve/chatgpt_telegram_bot/main/static/settings.png" align="center" style="width: 100%" />
 </div>
 
+The two secrets in the picture must be filled in, and the remaining fields are optional.
+
+other secrets:
+
+| secret name | optional value |default value|
+|------|------|------|
+|use_chatgpt_api | True of False | True|
+|allowed_telegram_usernames | ['username_a','username_b'] | [ ](if empty, the bot is available to anyone)|
+|new_dialog_timeout | number(new dialog starts after timeout (in seconds)) | 600|
 
 
 
