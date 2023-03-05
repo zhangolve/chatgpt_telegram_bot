@@ -1,0 +1,45 @@
+name: telegram bot listen
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+  schedule:
+      # * is a special character in YAML so you have to quote this string
+      - cron:  '0 */5 * * *'
+env:
+  TZ: Asia/Shanghai
+
+# concurrency: staging_environment
+concurrency: 
+  group: ${{github.workflow}}
+  cancel-in-progress: true
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: set up
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: set up env
+      uses: actions/setup-python@v3
+      with:
+        python-version: 'python:3.8-slim' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+        architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+        cache: 'pip'
+        cache-dependency-path: 'requirements.txt'
+    - name: prepare data
+      env:
+        telegram_token: ${{ secrets.telegram_token }}
+        openai_api_key: ${{ secrets.openai_api_key }}
+        use_chatgpt_api: ${{ secrets.use_chatgpt_api }}
+        allowed_telegram_usernames: ${{ secrets.allowed_telegram_usernames }}
+        new_dialog_timeout: ${{ secrets.new_dialog_timeout }}
+      run: | 
+        apt-get update
+        apt-get install -y python3 python3-pip python-dev build-essential python3-venv
+        pip install -r requirements.txt
+        python bot/bot.py
+
+
