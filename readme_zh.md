@@ -20,6 +20,11 @@
 2. 从@BotFather获取Telegram机器人令牌。
 3. Fork此Repo，并添加一些Secrets（按照此教程https://docs.github.com/en/actions/security-guides/encrypted-secrets）。
 
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/zhangolve/chatgpt_telegram_bot/main/static/settings.png" align="center" style="width: 100%" />
+</div>
+
 图片中的两个Secrets必须填写，其余字段可选。
 
 其他Secrets：
