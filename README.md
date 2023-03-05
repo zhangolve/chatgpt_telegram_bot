@@ -1,7 +1,7 @@
 # ChatGPT Telegram Bot: **Fast. No daily limits. Special chat modes**
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/karfly/chatgpt_telegram_bot/main/static/header.png" align="center" style="width: 100%" />
+<img src="https://raw.githubusercontent.com/zhangolve/chatgpt_telegram_bot/main/static/header.png" align="center" style="width: 100%" />
 </div>
 
 <p align="center">
@@ -38,7 +38,7 @@ You can deploy your own bot, or use mine: [@chatgpt_karfly_bot](https://t.me/cha
 
 2. Get your Telegram bot token from [@BotFather](https://t.me/BotFather)
 
-3. fork this repo and add some secrets (follow this turtoial https://docs.github.com/en/actions/security-guides/encrypted-secrets)
+3. Fork this repo and add some secrets (follow this turtoial https://docs.github.com/en/actions/security-guides/encrypted-secrets)
 
 
 <div align="center">
@@ -54,6 +54,10 @@ other secrets:
 |use_chatgpt_api | True of False | True|
 |allowed_telegram_usernames | ['username_a','username_b'] | [ ](if empty, the bot is available to anyone)|
 |new_dialog_timeout | number(new dialog starts after timeout (in seconds)) | 600|
+
+4. Go to repo `Actions` and trigger this action manually
+
+FYI: By default, GitHub Actions kills workflows after 6 hours if they have not finished by then..Due to the limitations of Github Actions, I have set up a job to be restarted every five hours. Therefore, in theory, you only need to manually click once to start the job, and then the job will be able to work 24 hours.
 
 
 
