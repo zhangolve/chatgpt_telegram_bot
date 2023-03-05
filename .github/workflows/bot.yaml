@@ -25,7 +25,7 @@ jobs:
     - name: set up env
       uses: actions/setup-python@v3
       with:
-        python-version: 'python:3.8-slim' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+        python-version: 'python:3.7' # Version range or exact version of a Python version to use, using SemVer's version range syntax
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
         cache: 'pip'
         cache-dependency-path: 'requirements.txt'
@@ -37,8 +37,6 @@ jobs:
         allowed_telegram_usernames: ${{ secrets.allowed_telegram_usernames }}
         new_dialog_timeout: ${{ secrets.new_dialog_timeout }}
       run: | 
-        apt-get update
-        apt-get install -y python3 python3-pip python-dev build-essential python3-venv
         pip install -r requirements.txt
         python bot/bot.py
 
