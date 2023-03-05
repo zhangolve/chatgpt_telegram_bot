@@ -38,17 +38,15 @@ You can deploy your own bot, or use mine: [@chatgpt_karfly_bot](https://t.me/cha
 
 2. Get your Telegram bot token from [@BotFather](https://t.me/BotFather)
 
-3. Edit `config/config.example.yml` to set your tokens and run 2 commands below (*if you're advanced user, you can also edit* `config/config.example.env`):
-```bash
-mv config/config.example.yml config/config.yml
-mv config/config.example.env config/config.env
-```
+3. fork this repo and add some secrets (follow this turtoial https://docs.github.com/en/actions/security-guides/encrypted-secrets)
 
-🔥 And now **run**:
 
-```bash
-docker-compose --env-file config/config.env up --build
-```
+<div align="center">
+<img src="https://raw.githubusercontent.com/zhangolve/chatgpt_telegram_bot/main/static/settings.png" align="center" style="width: 100%" />
+</div>
+
+
+
 
 ## References
 1. [*Build ChatGPT from GPT-3*](https://learnprompting.org/docs/applied_prompting/build_chatgpt)
