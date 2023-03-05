@@ -1,4 +1,4 @@
-# ChatGPT Telegram Bot: **Fast. No daily limits. Special chat modes**
+# ChatGPT Telegram Bot: **Fast. No daily limits. Special chat modes** （[中文版本](https://github.com/zhangolve/chatgpt_telegram_bot/blob/main/readme_zh.md)）
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/zhangolve/chatgpt_telegram_bot/main/static/header.png" align="center" style="width: 100%" />
