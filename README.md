@@ -1,5 +1,9 @@
 # ChatGPT Telegram Bot: **Fast. No daily limits. Special chat modes** （[中文版本](https://github.com/zhangolve/chatgpt_telegram_bot/blob/main/readme_zh.md)）
 
+You don't need a database or Docker environment to create a ChatGPT Telegram Bot. All you need is a public Github repo. Of course, this also means that no chat records will be saved; all chat records will be temporarily stored on Github and will be destroyed when the workflow is rerun. If you are concerned about this, you can choose not to use it.
+
+
+
 <div align="center">
 <img src="https://raw.githubusercontent.com/zhangolve/chatgpt_telegram_bot/main/static/header.png" align="center" style="width: 100%" />
 </div>
