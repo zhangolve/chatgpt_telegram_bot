@@ -37,7 +37,9 @@ jobs:
         allowed_telegram_usernames: ${{ secrets.allowed_telegram_usernames }}
         new_dialog_timeout: ${{ secrets.new_dialog_timeout }}
       run: | 
+        apt-get install -y ffmpeg
         pip install -r requirements.txt
+        echo 'ready start'
         python bot/bot.py
 
 
