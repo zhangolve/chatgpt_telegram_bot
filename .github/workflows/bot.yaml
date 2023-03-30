@@ -37,6 +37,7 @@ jobs:
         allowed_telegram_usernames: ${{ secrets.allowed_telegram_usernames }}
         new_dialog_timeout: ${{ secrets.new_dialog_timeout }}
       run: | 
+        sudo apt-get update
         sudo apt-get install -y ffmpeg
         pip install -r requirements.txt
         echo 'ready start'
